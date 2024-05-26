@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def compute_matrix(matrix=[]):
     return [list(map(lambda x: x ** 2, row)) for row in matrix]
 
