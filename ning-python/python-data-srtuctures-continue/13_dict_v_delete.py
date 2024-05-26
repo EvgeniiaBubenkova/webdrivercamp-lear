@@ -3,7 +3,8 @@ def dict_v_delete(a_dictionary, value):
     keys_to_delete = [k for k, v in a_dictionary.items() if v == value] 
     for k in keys_to_delete:
         del a_dictionary[k]
-    return dict_
+    return a_dictionary
+
 
 if __name__=="__main__":
     dict_print = __import__('6_dict_print').dict_print
