@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 def list_int_print(lst=[], i=0):
     count = 0
-    try:
-        for x in range(i):
-            if isinstance(lst[x], int):
-                print("{:d}".format(lst[x]), end="")
-                count += 1
-        print()  
-    except IndexError:
-        pass  
-
+    for x in range(i):
+        try:
+            print(f"{lst[x]:d}", end="")
+            count += 1
+        except (ValueError, TypeError):
+            continue  
+    
+    print()
     return count
 
 if __name__=="__main__":
